@@ -17,3 +17,4 @@ git push
 echo ---
 echo Automatischer Commit und Push abgeschlossen.
 pause
+exit
