@@ -1,5 +1,9 @@
-cd "C:\Users\Linus\Documents\GitHub\wishlist\wishlist new (1).txt"
-git add --all
-git commit -m autoCommit %date~-4%%date~3,2%%date~0,2%.%time~0,2%%time~3,2%%time~6,2%
-git push
-exit
+@echo off
+cd "C:\Pfad\zu\deinem\Repo"
+
+REM Datei, die automatisch geändert wird (z. B. ein Logfile)
+echo %date% %time% >> auto_log.txt
+
+git add .
+git commit -m "Automatischer Commit am %date% %time%"
+git push 
