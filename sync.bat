@@ -2,9 +2,6 @@
 REM Wechsle ins lokale Git-Repository
 cd "C:\Pfad\zu\deinem\Repo"
 
-REM Optional: Automatische Änderung hinzufügen, damit ein Commit garantiert erfolgt
-echo %date% %time% >> activity.log
-
 REM Alle Änderungen zum Commit hinzufügen (neue, geänderte, gelöschte Dateien)
 git add -A
 
