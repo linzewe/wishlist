@@ -1,9 +1,19 @@
 @echo off
+REM Wechsle ins lokale Git-Repository
 cd "C:\Pfad\zu\deinem\Repo"
 
-REM Datei, die automatisch geändert wird (z. B. ein Logfile)
-echo %date% %time% >> wishlist new (1).txt
+REM Optional: Automatische Änderung hinzufügen, damit ein Commit garantiert erfolgt
+echo %date% %time% >> activity.log
 
-git add .
+REM Alle Änderungen zum Commit hinzufügen (neue, geänderte, gelöschte Dateien)
+git add -A
+
+REM Commit mit Zeitstempel als Nachricht
 git commit -m "Automatischer Commit am %date% %time%"
-git push 
+
+REM Push zum Remote-Repository (GitHub)
+git push
+
+echo ---
+echo Automatischer Commit und Push abgeschlossen.
+pause
